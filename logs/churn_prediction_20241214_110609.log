@@ -1,0 +1,36 @@
+2024-12-14 11:06:09,089 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 11:06:09,092 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.126.13:5000
+2024-12-14 11:06:09,092 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-14 11:06:30,019 - __main__ - INFO - User input: gender male, Senior_Citizen no, Is_Married yes, Dependents yes, tenure 10, Dual yes, Contract month-to-month, Paperless_Billing yes, Payment_Method electronic check, Monthly_Charges 100, Online_Security yes, Online_Backup yes, Device_Protection no, Streaming_TV yes, Streaming_Movies no, Internet_Service yes, Tech_Support yes
+2024-12-14 10:48:29,802 - __main__ - INFO - User input:  gender male, Senior_Citizen no, Is_Married yes, Dependents yes, tenure 10, Dual yes, Contract month-to-month, Paperless_Billing yes, Payment_Method electronic check, Monthly_Charges 100, Online_Security yes, Online_Backup yes, Device_Protection no, Streaming_TV yes, Streaming_Movies no, Internet_Service yes, Tech_Support yes
+2024-12-14 11:06:30,023 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 11:06:30,072 - __main__ - INFO - Predicted churn probability: 0.1769958736004606
+2024-12-14 11:06:30,072 - __main__ - INFO - Generated prompt: you are a helpful assistant that help the marketing team know the churn probability
+        for customers when asked to predict churn. you are the best chatbot assistant in the world. you do not write code. reply nicely
+        and conciselygive the user the information about churn. the churn risk is equal: Low Risk and the probability equals: 0.1769958736004606
+2024-12-14 11:06:43,299 - __main__ - INFO - LLM response: .
+
+2024-12-14 11:06:43,302 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 11:06:43] "POST /api/v1/response HTTP/1.1" 200 -
+2024-12-14 11:07:49,941 - __main__ - INFO - User input: gender male, Senior_Citizen no, Is_Married yes, Dependents yes, tenure 10, Dual yes, Contract month-to-month, Paperless_Billing yes, Payment_Method electronic check, Monthly_Charges 100, Online_Security yes, Online_Backup yes, Device_Protection no, Streaming_TV yes, Streaming_Movies no, Internet_Service yes, Tech_Support yes
+2024-12-14 10:48:29,802 - __main__ - INFO - User input:  gender male, Senior_Citizen no, Is_Married yes, Dependents yes, tenure 10, Dual yes, Contract month-to-month, Paperless_Billing yes, Payment_Method electronic check, Monthly_Charges 100, Online_Security yes, Online_Backup yes, Device_Protection no, Streaming_TV yes, Streaming_Movies no, Internet_Service yes, Tech_Support yes
+2024-12-14 11:07:49,945 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 11:07:50,005 - __main__ - INFO - Predicted churn probability: 0.1769958736004606
+2024-12-14 11:07:50,005 - __main__ - INFO - Generated prompt: you are a helpful assistant that help the marketing team know the churn probability
+        for customers when asked to predict churn. you are the best chatbot assistant in the world. you do not write code. reply nicely
+        and conciselygive the user the information about churn. the churn risk is equal: Low Risk and the probability equals: 0.1769958736004606
+2024-12-14 11:09:03,781 - __main__ - INFO - User input: gender male, Senior_Citizen no, Is_Married yes, Dependents yes, tenure 10, Dual yes, Contract month-to-month, Paperless_Billing yes, Payment_Method electronic check, Monthly_Charges 100, Online_Security yes, Online_Backup yes, Device_Protection no, Streaming_TV yes, Streaming_Movies no, Internet_Service yes, Tech_Support yes
+2024-12-14 10:48:29,802 - __main__ - INFO - User input:  gender male, Senior_Citizen no, Is_Married yes, Dependents yes, tenure 10, Dual yes, Contract month-to-month, Paperless_Billing yes, Payment_Method electronic check, Monthly_Charges 100, Online_Security yes, Online_Backup yes, Device_Protection no, Streaming_TV yes, Streaming_Movies no, Internet_Service yes, Tech_Support yes
+2024-12-14 11:09:03,784 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 11:09:03,837 - __main__ - INFO - Predicted churn probability: 0.1769958736004606
+2024-12-14 11:09:03,837 - __main__ - INFO - Generated prompt: you are a helpful assistant that help the marketing team know the churn probability
+        for customers when asked to predict churn. you are the best chatbot assistant in the world. you do not write code. reply nicely
+        and conciselygive the user the information about churn. the churn risk is equal: Low Risk and the probability equals: 0.1769958736004606
+2024-12-14 11:09:05,032 - __main__ - INFO - LLM response: .
+
+2024-12-14 11:09:05,034 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 11:09:05] "POST /api/v1/response HTTP/1.1" 200 -
+2024-12-14 11:09:09,593 - __main__ - INFO - LLM response: .
+
+2024-12-14 11:09:09,594 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 11:09:09] "POST /api/v1/response HTTP/1.1" 200 -

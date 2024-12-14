@@ -1,0 +1,133 @@
+2024-12-14 06:12:50,302 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 06:14:06,152 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 06:14:06,205 - __main__ - INFO - User input: hello
+2024-12-14 06:14:24,814 - __main__ - ERROR - Invalid JSON format: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+2024-12-14 06:14:24,816 - __main__ - ERROR - Problematic JSON string: {
+    gender: "Male",
+    Senior_Citizen: "Yes",
+    Is_Married: "No",
+    Dependents: "0",
+    tenure: "1",
+    Dual: "No",
+    Contract: "Yes",
+    Paperless_Billing: "Yes",
+    Payment_Method: "PayPal",
+    Monthly_Charges: "20.00",
+    Online_Security: "No",
+    Online_Backup: "No",
+    Device_Protection: "No",
+    Streaming_TV: "No",
+    Streaming_Movies: "Yes",
+    Internet_Service: "Yes",
+    Tech_Support: "Yes"
+}
+2024-12-14 06:14:24,816 - __main__ - ERROR - LLM parsing failed: Invalid JSON response: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+2024-12-14 06:14:25,849 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/new.py", line 327, in _validate_and_clean_parsed_data
+    parsed_data = json.loads(json_response)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/new.py", line 283, in _call_llm_for_parsing
+    parsed_data = self._validate_and_clean_parsed_data(json_str)
+  File "/home/mazen/Desktop/new/new.py", line 339, in _validate_and_clean_parsed_data
+    raise ValueError(f"Invalid JSON response: {e}")
+ValueError: Invalid JSON response: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+
+2024-12-14 06:14:25,850 - __main__ - ERROR - Error in advanced input parsing: Invalid JSON response: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+2024-12-14 06:14:25,852 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/new.py", line 327, in _validate_and_clean_parsed_data
+    parsed_data = json.loads(json_response)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/new.py", line 218, in parse_input
+    parsed_data = self._call_llm_for_parsing(prompt)
+  File "/home/mazen/Desktop/new/new.py", line 283, in _call_llm_for_parsing
+    parsed_data = self._validate_and_clean_parsed_data(json_str)
+  File "/home/mazen/Desktop/new/new.py", line 339, in _validate_and_clean_parsed_data
+    raise ValueError(f"Invalid JSON response: {e}")
+ValueError: Invalid JSON response: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+
+2024-12-14 06:14:25,853 - __main__ - ERROR - Error in input preprocessing: Could not parse input: Invalid JSON response: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+2024-12-14 06:14:25,854 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/new.py", line 327, in _validate_and_clean_parsed_data
+    parsed_data = json.loads(json_response)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/new.py", line 218, in parse_input
+    parsed_data = self._call_llm_for_parsing(prompt)
+  File "/home/mazen/Desktop/new/new.py", line 283, in _call_llm_for_parsing
+    parsed_data = self._validate_and_clean_parsed_data(json_str)
+  File "/home/mazen/Desktop/new/new.py", line 339, in _validate_and_clean_parsed_data
+    raise ValueError(f"Invalid JSON response: {e}")
+ValueError: Invalid JSON response: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/new.py", line 370, in preprocess_input
+    parsed_input = self.input_parser.parse_input(user_input)
+  File "/home/mazen/Desktop/new/new.py", line 228, in parse_input
+    raise ValueError(f"Could not parse input: {e}")
+ValueError: Could not parse input: Invalid JSON response: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+
+2024-12-14 06:14:25,855 - __main__ - ERROR - Error during response generation: Could not parse input: Invalid JSON response: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+2024-12-14 06:14:25,857 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/new.py", line 327, in _validate_and_clean_parsed_data
+    parsed_data = json.loads(json_response)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/new.py", line 218, in parse_input
+    parsed_data = self._call_llm_for_parsing(prompt)
+  File "/home/mazen/Desktop/new/new.py", line 283, in _call_llm_for_parsing
+    parsed_data = self._validate_and_clean_parsed_data(json_str)
+  File "/home/mazen/Desktop/new/new.py", line 339, in _validate_and_clean_parsed_data
+    raise ValueError(f"Invalid JSON response: {e}")
+ValueError: Invalid JSON response: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/new.py", line 388, in generate_response
+    df = self.preprocess_input(user_input)
+  File "/home/mazen/Desktop/new/new.py", line 370, in preprocess_input
+    parsed_input = self.input_parser.parse_input(user_input)
+  File "/home/mazen/Desktop/new/new.py", line 228, in parse_input
+    raise ValueError(f"Could not parse input: {e}")
+ValueError: Could not parse input: Invalid JSON response: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
+

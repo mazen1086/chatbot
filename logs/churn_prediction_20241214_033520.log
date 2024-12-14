@@ -1,0 +1,48 @@
+2024-12-14 03:35:20,861 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 03:35:27,041 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 03:35:27,141 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 03:35:27,143 - __main__ - INFO - User input: hello
+2024-12-14 03:35:27,143 - __main__ - ERROR - Error in advanced input parsing: Invalid format specifier
+2024-12-14 03:35:27,144 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/llama.py", line 218, in parse_input
+    prompt = self._construct_parsing_prompt(user_input)
+  File "/home/mazen/Desktop/new/llama.py", line 248, in _construct_parsing_prompt
+    prompt = f"""Parse the following customer details into a structured JSON format:
+ValueError: Invalid format specifier
+
+2024-12-14 03:35:27,144 - __main__ - ERROR - Error in input preprocessing: Could not parse input: Invalid format specifier
+2024-12-14 03:35:27,144 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/llama.py", line 218, in parse_input
+    prompt = self._construct_parsing_prompt(user_input)
+  File "/home/mazen/Desktop/new/llama.py", line 248, in _construct_parsing_prompt
+    prompt = f"""Parse the following customer details into a structured JSON format:
+ValueError: Invalid format specifier
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/llama.py", line 430, in preprocess_input
+    parsed_input = self.input_parser.parse_input(user_input)
+  File "/home/mazen/Desktop/new/llama.py", line 237, in parse_input
+    raise ValueError(f"Could not parse input: {e}")
+ValueError: Could not parse input: Invalid format specifier
+
+2024-12-14 03:35:27,145 - __main__ - ERROR - Error during response generation: Could not parse input: Invalid format specifier
+2024-12-14 03:35:27,145 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/llama.py", line 218, in parse_input
+    prompt = self._construct_parsing_prompt(user_input)
+  File "/home/mazen/Desktop/new/llama.py", line 248, in _construct_parsing_prompt
+    prompt = f"""Parse the following customer details into a structured JSON format:
+ValueError: Invalid format specifier
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/llama.py", line 447, in generate_response
+    df = self.preprocess_input(user_input)
+  File "/home/mazen/Desktop/new/llama.py", line 430, in preprocess_input
+    parsed_input = self.input_parser.parse_input(user_input)
+  File "/home/mazen/Desktop/new/llama.py", line 237, in parse_input
+    raise ValueError(f"Could not parse input: {e}")
+ValueError: Could not parse input: Invalid format specifier
+

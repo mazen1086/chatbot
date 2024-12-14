@@ -1,0 +1,47 @@
+2024-12-14 10:30:39,418 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 10:30:39,465 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.126.13:5000
+2024-12-14 10:30:39,465 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-14 10:30:50,289 - __main__ - INFO - User input: hello
+2024-12-14 10:30:50,291 - __main__ - WARNING - Missing fields in user input: ['gender', 'Senior_Citizen', 'Is_Married', 'Dependents', 'tenure', 'Dual', 'Contract', 'Paperless_Billing', 'Payment_Method', 'Monthly_Charges', 'Online_Security', 'Online_Backup', 'Device_Protection', 'Streaming_TV', 'Streaming_Movies', 'Internet_Service', 'Tech_Support']
+2024-12-14 10:30:50,292 - __main__ - ERROR - Error in input preprocessing: Please provide values for the missing fields: gender, Senior_Citizen, Is_Married, Dependents, tenure, Dual, Contract, Paperless_Billing, Payment_Method, Monthly_Charges, Online_Security, Online_Backup, Device_Protection, Streaming_TV, Streaming_Movies, Internet_Service, Tech_Support
+2024-12-14 10:30:50,292 - __main__ - ERROR - Traceback (most recent call last):
+  File "ll.py", line 252, in preprocess_input
+    raise ValueError(f"Please provide values for the missing fields: {', '.join(missing_fields)}")
+ValueError: Please provide values for the missing fields: gender, Senior_Citizen, Is_Married, Dependents, tenure, Dual, Contract, Paperless_Billing, Payment_Method, Monthly_Charges, Online_Security, Online_Backup, Device_Protection, Streaming_TV, Streaming_Movies, Internet_Service, Tech_Support
+
+2024-12-14 10:30:50,292 - __main__ - ERROR - Error during response generation: Please provide values for the missing fields: gender, Senior_Citizen, Is_Married, Dependents, tenure, Dual, Contract, Paperless_Billing, Payment_Method, Monthly_Charges, Online_Security, Online_Backup, Device_Protection, Streaming_TV, Streaming_Movies, Internet_Service, Tech_Support
+2024-12-14 10:30:50,293 - __main__ - ERROR - Traceback (most recent call last):
+  File "ll.py", line 266, in generate_response
+    df = self.preprocess_input(user_input)
+  File "ll.py", line 252, in preprocess_input
+    raise ValueError(f"Please provide values for the missing fields: {', '.join(missing_fields)}")
+ValueError: Please provide values for the missing fields: gender, Senior_Citizen, Is_Married, Dependents, tenure, Dual, Contract, Paperless_Billing, Payment_Method, Monthly_Charges, Online_Security, Online_Backup, Device_Protection, Streaming_TV, Streaming_Movies, Internet_Service, Tech_Support
+
+2024-12-14 10:30:50,293 - ll - ERROR - Exception on /api/v1/response [POST]
+Traceback (most recent call last):
+  File "ll.py", line 266, in generate_response
+    df = self.preprocess_input(user_input)
+  File "ll.py", line 252, in preprocess_input
+    raise ValueError(f"Please provide values for the missing fields: {', '.join(missing_fields)}")
+ValueError: Please provide values for the missing fields: gender, Senior_Citizen, Is_Married, Dependents, tenure, Dual, Contract, Paperless_Billing, Payment_Method, Monthly_Charges, Online_Security, Online_Backup, Device_Protection, Streaming_TV, Streaming_Movies, Internet_Service, Tech_Support
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "ll.py", line 317, in getResponse
+    response = chatbot.generate_response(user_input)
+  File "ll.py", line 285, in generate_response
+    raise RuntimeError(f"Could not generate response: {e}")
+RuntimeError: Could not generate response: Please provide values for the missing fields: gender, Senior_Citizen, Is_Married, Dependents, tenure, Dual, Contract, Paperless_Billing, Payment_Method, Monthly_Charges, Online_Security, Online_Backup, Device_Protection, Streaming_TV, Streaming_Movies, Internet_Service, Tech_Support
+2024-12-14 10:30:50,295 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 10:30:50] "[35m[1mPOST /api/v1/response HTTP/1.1[0m" 500 -

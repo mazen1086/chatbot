@@ -1,0 +1,36 @@
+2024-12-14 03:32:39,846 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 03:33:00,489 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 03:33:00,587 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 03:33:00,589 - __main__ - INFO - User input: hello
+2024-12-14 03:33:01,441 - __main__ - INFO - parsed_input. =    gender Senior_Citizen Is_Married Dependents  tenure Dual        Contract Paperless_Billing    Payment_Method  Monthly_Charges
+0  female             no        yes         no      24  yes  month-to-month               yes  electronic check             84.8
+2024-12-14 03:33:01,443 - __main__ - ERROR - Error in input preprocessing: Must pass 2-d input. shape=(1, 1, 10)
+2024-12-14 03:33:01,476 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/llama.py", line 434, in preprocess_input
+    df = pd.DataFrame([parsed_input])
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/pandas/core/frame.py", line 798, in __init__
+    mgr = ndarray_to_mgr(
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 320, in ndarray_to_mgr
+    values = _prep_ndarraylike(values, copy=copy_on_sanitize)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 560, in _prep_ndarraylike
+    return _ensure_2d(values)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 570, in _ensure_2d
+    raise ValueError(f"Must pass 2-d input. shape={values.shape}")
+ValueError: Must pass 2-d input. shape=(1, 1, 10)
+
+2024-12-14 03:33:01,477 - __main__ - ERROR - Error during response generation: Must pass 2-d input. shape=(1, 1, 10)
+2024-12-14 03:33:01,478 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/llama.py", line 447, in generate_response
+    df = self.preprocess_input(user_input)
+  File "/home/mazen/Desktop/new/llama.py", line 434, in preprocess_input
+    df = pd.DataFrame([parsed_input])
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/pandas/core/frame.py", line 798, in __init__
+    mgr = ndarray_to_mgr(
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 320, in ndarray_to_mgr
+    values = _prep_ndarraylike(values, copy=copy_on_sanitize)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 560, in _prep_ndarraylike
+    return _ensure_2d(values)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 570, in _ensure_2d
+    raise ValueError(f"Must pass 2-d input. shape={values.shape}")
+ValueError: Must pass 2-d input. shape=(1, 1, 10)
+

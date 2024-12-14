@@ -1,0 +1,176 @@
+2024-12-14 14:57:23,064 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-2-7b-chat
+2024-12-14 14:57:23,068 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.126.13:5000
+2024-12-14 14:57:23,068 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-14 14:57:32,982 - __main__ - INFO - User input: can you predict churn?
+2024-12-14 14:57:32,988 - __main__ - WARNING - Missing fields in user input: ['gender', 'Senior_Citizen', 'Is_Married', 'Dependents', 'tenure', 'Dual', 'Contract', 'Paperless_Billing', 'Payment_Method', 'Monthly_Charges', 'Online_Security', 'Online_Backup', 'Device_Protection', 'Streaming_TV', 'Streaming_Movies', 'Internet_Service', 'Tech_Support']
+2024-12-14 14:57:32,990 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 14:57:32,992 - __main__ - INFO - Generated prompt: You are an intelligent and professional assistant tasked with helping the marketing team analyze and predict customer churn. Your role is to respond as a knowledgeable assistant. Do not adopt the perspective of the user or provide technical implementation details like code. Focus on being helpful, professional, and user-friendly.
+
+Assistant Action Required if the user asked about churn:Avoid disclosing the churn probability. Instead, ask the user for more client-related information to assist with the analysis.
+
+User Query: can you predict churn?
+if the user does not ask about churn, respond normally to his query.
+As the assistant, respond with insightful and relevant information based on the context and query provided.
+2024-12-14 14:58:35,412 - __main__ - ERROR - Error during response generation: 504 Server Error: Gateway Timeout for url: https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat (Request ID: FTWlZnAF9Q3vnWQEJb3N9)
+
+Model meta-llama/Llama-2-7b-chat time out
+2024-12-14 14:58:35,417 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 406, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Timeout for url: https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "bot.py", line 302, in generate_response
+    llm_response = self.llm.text_generation(prompt, max_new_tokens=500, temperature=0.9,repetition_penalty=1.1)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_client.py", line 2332, in text_generation
+    raise_text_generation_error(e)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_common.py", line 466, in raise_text_generation_error
+    raise http_error
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_client.py", line 2302, in text_generation
+    bytes_output = self.post(json=payload, model=model, task="text-generation", stream=stream)  # type: ignore
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_client.py", line 296, in post
+    hf_raise_for_status(response)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 477, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 504 Server Error: Gateway Timeout for url: https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat (Request ID: FTWlZnAF9Q3vnWQEJb3N9)
+
+Model meta-llama/Llama-2-7b-chat time out
+
+2024-12-14 14:58:35,418 - bot - ERROR - Exception on /api/v1/response [POST]
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 406, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Timeout for url: https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "bot.py", line 302, in generate_response
+    llm_response = self.llm.text_generation(prompt, max_new_tokens=500, temperature=0.9,repetition_penalty=1.1)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_client.py", line 2332, in text_generation
+    raise_text_generation_error(e)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_common.py", line 466, in raise_text_generation_error
+    raise http_error
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_client.py", line 2302, in text_generation
+    bytes_output = self.post(json=payload, model=model, task="text-generation", stream=stream)  # type: ignore
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_client.py", line 296, in post
+    hf_raise_for_status(response)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 477, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 504 Server Error: Gateway Timeout for url: https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat (Request ID: FTWlZnAF9Q3vnWQEJb3N9)
+
+Model meta-llama/Llama-2-7b-chat time out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "bot.py", line 328, in getResponse
+    response = chatbot.generate_response(user_input)
+  File "bot.py", line 308, in generate_response
+    raise RuntimeError(f"Could not generate response: {e}")
+RuntimeError: Could not generate response: 504 Server Error: Gateway Timeout for url: https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat (Request ID: FTWlZnAF9Q3vnWQEJb3N9)
+
+Model meta-llama/Llama-2-7b-chat time out
+2024-12-14 14:58:35,423 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 14:58:35] "[35m[1mPOST /api/v1/response HTTP/1.1[0m" 500 -
+2024-12-14 14:58:45,549 - __main__ - INFO - User input: can you predict churn?
+2024-12-14 14:58:45,549 - __main__ - WARNING - Missing fields in user input: ['gender', 'Senior_Citizen', 'Is_Married', 'Dependents', 'tenure', 'Dual', 'Contract', 'Paperless_Billing', 'Payment_Method', 'Monthly_Charges', 'Online_Security', 'Online_Backup', 'Device_Protection', 'Streaming_TV', 'Streaming_Movies', 'Internet_Service', 'Tech_Support']
+2024-12-14 14:58:45,551 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 14:58:45,553 - __main__ - INFO - Generated prompt: You are an intelligent and professional assistant tasked with helping the marketing team analyze and predict customer churn. Your role is to respond as a knowledgeable assistant. Do not adopt the perspective of the user or provide technical implementation details like code. Focus on being helpful, professional, and user-friendly.
+
+Assistant Action Required if the user asked about churn:Avoid disclosing the churn probability. Instead, ask the user for more client-related information to assist with the analysis.
+
+User Query: can you predict churn?
+if the user does not ask about churn, respond normally to his query.
+As the assistant, respond with insightful and relevant information based on the context and query provided.
+2024-12-14 14:59:37,443 - __main__ - ERROR - Error during response generation: 504 Server Error: Gateway Timeout for url: https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat (Request ID: KP66g_7BUFo4IRPxrg6Ts)
+
+Model meta-llama/Llama-2-7b-chat time out
+2024-12-14 14:59:37,444 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 406, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Timeout for url: https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "bot.py", line 302, in generate_response
+    llm_response = self.llm.text_generation(prompt, max_new_tokens=500, temperature=0.9,repetition_penalty=1.1)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_client.py", line 2332, in text_generation
+    raise_text_generation_error(e)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_common.py", line 466, in raise_text_generation_error
+    raise http_error
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_client.py", line 2302, in text_generation
+    bytes_output = self.post(json=payload, model=model, task="text-generation", stream=stream)  # type: ignore
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_client.py", line 296, in post
+    hf_raise_for_status(response)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 477, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 504 Server Error: Gateway Timeout for url: https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat (Request ID: KP66g_7BUFo4IRPxrg6Ts)
+
+Model meta-llama/Llama-2-7b-chat time out
+
+2024-12-14 14:59:37,445 - bot - ERROR - Exception on /api/v1/response [POST]
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 406, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Timeout for url: https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "bot.py", line 302, in generate_response
+    llm_response = self.llm.text_generation(prompt, max_new_tokens=500, temperature=0.9,repetition_penalty=1.1)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_client.py", line 2332, in text_generation
+    raise_text_generation_error(e)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_common.py", line 466, in raise_text_generation_error
+    raise http_error
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_client.py", line 2302, in text_generation
+    bytes_output = self.post(json=payload, model=model, task="text-generation", stream=stream)  # type: ignore
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/inference/_client.py", line 296, in post
+    hf_raise_for_status(response)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 477, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 504 Server Error: Gateway Timeout for url: https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat (Request ID: KP66g_7BUFo4IRPxrg6Ts)
+
+Model meta-llama/Llama-2-7b-chat time out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "bot.py", line 328, in getResponse
+    response = chatbot.generate_response(user_input)
+  File "bot.py", line 308, in generate_response
+    raise RuntimeError(f"Could not generate response: {e}")
+RuntimeError: Could not generate response: 504 Server Error: Gateway Timeout for url: https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat (Request ID: KP66g_7BUFo4IRPxrg6Ts)
+
+Model meta-llama/Llama-2-7b-chat time out
+2024-12-14 14:59:37,448 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 14:59:37] "[35m[1mPOST /api/v1/response HTTP/1.1[0m" 500 -

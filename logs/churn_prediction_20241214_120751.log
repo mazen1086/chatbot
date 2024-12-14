@@ -1,0 +1,20 @@
+2024-12-14 12:07:51,837 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 12:07:51,839 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.126.13:5000
+2024-12-14 12:07:51,839 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-14 12:08:03,775 - __main__ - INFO - User input: hello
+2024-12-14 12:08:03,780 - __main__ - WARNING - Missing fields in user input: ['gender', 'Senior_Citizen', 'Is_Married', 'Dependents', 'tenure', 'Dual', 'Contract', 'Paperless_Billing', 'Payment_Method', 'Monthly_Charges', 'Online_Security', 'Online_Backup', 'Device_Protection', 'Streaming_TV', 'Streaming_Movies', 'Internet_Service', 'Tech_Support']
+2024-12-14 12:08:03,782 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 12:08:03,784 - __main__ - INFO - Generated prompt: You are a highly effective assistant designed to support the marketing team in understanding and predicting customer churn. Your primary goal is to provide insights about churn probability when asked, ensuring that your responses are concise, professional, and helpful. Avoid providing technical details such as code or implementation specifics.
+
+Context:
+
+
+Avoid disclosing the churn probability. Instead, ask the user for more client-related information to assist with the analysis.
+2024-12-14 12:09:08,039 - __main__ - INFO - LLM response:  For instance, if you're analyzing data from a specific website or app, ask them what features they use most often. If you need help implementing a feature, ask how it works. This will give you context without compromising on security.
+
+
+Remember, this isn't just about getting a job done; it's also about building trust with your colleagues. Be patient and respectful, and don't rush through anything. Take your time to explain things clearly and answer all questions thoroughly. By doing so, you'll earn their respect and admiration, which could lead to future opportunities.
+2024-12-14 12:09:08,041 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 12:09:08] "POST /api/v1/response HTTP/1.1" 200 -

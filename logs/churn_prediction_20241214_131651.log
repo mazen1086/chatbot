@@ -1,0 +1,40 @@
+2024-12-14 13:16:51,652 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 13:16:51,655 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.126.13:5000
+2024-12-14 13:16:51,655 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-14 13:16:57,082 - __main__ - INFO - User input: can you predict churn?
+2024-12-14 13:16:57,085 - __main__ - WARNING - Missing fields in user input: ['gender', 'Senior_Citizen', 'Is_Married', 'Dependents', 'tenure', 'Dual', 'Contract', 'Paperless_Billing', 'Payment_Method', 'Monthly_Charges', 'Online_Security', 'Online_Backup', 'Device_Protection', 'Streaming_TV', 'Streaming_Movies', 'Internet_Service', 'Tech_Support']
+2024-12-14 13:16:57,085 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 13:16:57,086 - __main__ - INFO - Generated prompt: You are an intelligent and professional assistant tasked with helping the marketing team analyze and predict customer churn. Your role is to respond as a knowledgeable assistant. Do not adopt the perspective of the user or provide technical implementation details like code. Focus on being helpful, professional, and user-friendly.
+
+Assistant Action Required if the user asked about churn:Avoid disclosing the churn probability. Instead, ask the user for more client-related information to assist with the analysis.
+
+User Query: can you predict churn?
+if the user does not ask about churn, respond normally to his query.
+As the assistant, respond with insightful and relevant information based on the context and query provided.
+2024-12-14 13:17:56,137 - __main__ - INFO - LLM response:  Assist by answering questions Users ask help with setting up the mail server, connecting new computers, understanding software updates etc… your main goal here should be to understand what the users needs are, yet make sure that the information they need is focused on solving their problem rather than locating the source of said issue. So illustrate how the information will benefit them once it is understood and created it should take returned work into consideration before leaving messages behind.In the future, consider improving on this task further by adding AIjímberks your user’s needs@Path Documentation The common response “thank you for downloading X” would be quite useless just in one conversation. Adding out-of-context descriptions or phrases and associating them with parts of applications might cause confusion, so ideally we want our API documenation to be informative, self-describing, and usable in isolation
+
+• #### What was it you were trying to do? [doc]
+
+• #### In which capacity did you execute these tasks (i.e., academic versus industry)? [designation] [work experience]
+
+• Appropriate behavioral adjustments may fall within the scope of this question, e.g. altering your tone of voice and volume in order to adhere to relevant standards of behavior (e.g., being inappropriate, taking too long).
+
+• core responsibility- have some idea of where the account is currently at Example: Analytics, Reputation Management, Data Integrity, Contract Lawyers, B2B sales, Project Management, Social Media, Search Engine Optimization.
+• Relevant research details Formulating and researching recent studies to support and corroborate the above core responsibilities prior to conducting any official Business GoalsVerification of information from sources like government websites, social media accounts, employment records, etc. Reviewing previous reports on online activities such as press releases and press statements. Sizing up competitors and analyzing market trends.Scaling back growth strategies when there's evidence of lackluster performanceCollecting data from customers via surveys/ web forms
+• paperwork/accountancy
+• numerical quantity/component
+• budgetary resources/theater initiative
+• ability
+• key principles/entry condition/sanction rules/equity philosophy
+• aspects/tensions/conflicts/facets
+• administrative activity/bureaucracy/municipal program
+• action by other parties/pool administrator/subsidiaries
+• Applications Programming Interface documentation
+• security best practices
+• financial pressures/threshold value/pay scale/accessibility limitations
+• physical maintenance/service
+• personal attributes/shaping criteria/normative measure/critical test/talent discrimination
+2024-12-14 13:17:56,138 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 13:17:56] "POST /api/v1/response HTTP/1.1" 200 -

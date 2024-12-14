@@ -1,0 +1,56 @@
+2024-12-14 07:10:00,155 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 07:10:09,618 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 07:10:09,712 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 07:10:09,717 - __main__ - INFO - User input: customer A details are gender is male, Senior_Citizen yes, Is_Married yes, Dependents yes, tenure 20, Dual is yes, Contract is month-to-month, Paperless_Billing is yes, Payment_Method is electronic check, Monthly_Charges is 100, Online_Security is yes, Online_Backup is yes, Device_Protection is yes, Streaming_TV is no, Streaming_Movies is yes, Internet_Service is yes, Tech_Support is yes
+2024-12-14 07:10:09,722 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 07:10:10,081 - __main__ - INFO - Predicted churn probability: 0.1769958736004606
+2024-12-14 07:10:10,083 - __main__ - INFO - Generated prompt: 
+CUSTOMER CONTEXT ANALYSIS:
+-------------------------
+Detected Customer Profile:
+Gender: male
+Senior Citizen: yes
+Is Married: yes
+Dependents: yes
+Tenure: 20
+Dual: yes
+Internet Service: no
+Online Security: no internet service
+Online Backup: no internet service
+Device Protection: no internet service
+Tech Support: no internet service
+Streaming Tv: no internet service
+Streaming Movies: no internet service
+Contract: month-to-month
+Paperless Billing: yes
+Payment Method: electronic check
+Monthly Charges: 20
+
+CHURN RISK ASSESSMENT:
+---------------------
+Risk Classification: Low Risk
+Predicted Churn Probability: 17.70%
+
+STRATEGIC RESPONSE FRAMEWORK:
+----------------------------
+1. Empathetically acknowledge the customer's unique situation
+2. Provide personalized retention recommendations
+3. Identify potential pain points or improvement areas
+4. Suggest tailored service modifications
+
+Your response should:
+- Be concise and actionable
+- Focus on customer value
+- Address potential churn triggers
+- Demonstrate proactive customer care
+
+GENERATE RESPONSE:
+
+2024-12-14 07:10:10,840 - __main__ - INFO - LLM response: ------------------
+- Determine if customer can be retained and why
+- Identify specific pain points and potential improvement areas
+- Make targeted recommendations that address key customer needs
+- Determine how to create a positive customer experience
+- Address potential churn triggers and risk factors
+
+

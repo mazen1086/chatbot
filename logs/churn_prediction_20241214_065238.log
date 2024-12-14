@@ -1,0 +1,93 @@
+2024-12-14 06:52:38,894 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 06:52:48,584 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 06:55:31,291 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 06:55:31,393 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 06:55:31,395 - __main__ - INFO - User input: i want to predict a customer churn
+2024-12-14 06:55:31,397 - __main__ - WARNING - Missing fields in user input: ['gender', 'Senior_Citizen', 'Is_Married', 'Dependents', 'tenure', 'Dual', 'Contract', 'Paperless_Billing', 'Payment_Method', 'Monthly_Charges', 'Online_Security', 'Online_Backup', 'Device_Protection', 'Streaming_TV', 'Streaming_Movies', 'Internet_Service', 'Tech_Support']
+2024-12-14 06:55:31,399 - __main__ - ERROR - Error in input preprocessing: Please provide values for the missing fields: gender, Senior_Citizen, Is_Married, Dependents, tenure, Dual, Contract, Paperless_Billing, Payment_Method, Monthly_Charges, Online_Security, Online_Backup, Device_Protection, Streaming_TV, Streaming_Movies, Internet_Service, Tech_Support
+2024-12-14 06:55:31,400 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/ll.py", line 269, in preprocess_input
+    raise ValueError(f"Please provide values for the missing fields: {', '.join(missing_fields)}")
+ValueError: Please provide values for the missing fields: gender, Senior_Citizen, Is_Married, Dependents, tenure, Dual, Contract, Paperless_Billing, Payment_Method, Monthly_Charges, Online_Security, Online_Backup, Device_Protection, Streaming_TV, Streaming_Movies, Internet_Service, Tech_Support
+
+2024-12-14 06:55:31,400 - __main__ - ERROR - Error during response generation: Please provide values for the missing fields: gender, Senior_Citizen, Is_Married, Dependents, tenure, Dual, Contract, Paperless_Billing, Payment_Method, Monthly_Charges, Online_Security, Online_Backup, Device_Protection, Streaming_TV, Streaming_Movies, Internet_Service, Tech_Support
+2024-12-14 06:55:31,401 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/ll.py", line 283, in generate_response
+    df = self.preprocess_input(user_input)
+  File "/home/mazen/Desktop/new/ll.py", line 269, in preprocess_input
+    raise ValueError(f"Please provide values for the missing fields: {', '.join(missing_fields)}")
+ValueError: Please provide values for the missing fields: gender, Senior_Citizen, Is_Married, Dependents, tenure, Dual, Contract, Paperless_Billing, Payment_Method, Monthly_Charges, Online_Security, Online_Backup, Device_Protection, Streaming_TV, Streaming_Movies, Internet_Service, Tech_Support
+
+2024-12-14 06:58:04,476 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 06:58:04,581 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 06:58:04,583 - __main__ - INFO - User input: customer A details are Senior_Citizen yes, Is_Married yes, Dependents yes, tenure 20, Dual is yes, Contract is month-to-month, Paperless_Billing is yes, Payment_Method is electronic check, Monthly_Charges is 100, Online_Security is yes, Online_Backup is yes, Device_Protection is yes, Streaming_TV is no, Streaming_Movies is yes, Internet_Service is yes, Tech_Support is yes
+2024-12-14 06:58:04,585 - __main__ - WARNING - Missing fields in user input: ['gender']
+2024-12-14 06:58:04,585 - __main__ - ERROR - Error in input preprocessing: Please provide values for the missing fields: gender
+2024-12-14 06:58:04,586 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/ll.py", line 269, in preprocess_input
+    raise ValueError(f"Please provide values for the missing fields: {', '.join(missing_fields)}")
+ValueError: Please provide values for the missing fields: gender
+
+2024-12-14 06:58:04,586 - __main__ - ERROR - Error during response generation: Please provide values for the missing fields: gender
+2024-12-14 06:58:04,587 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/ll.py", line 283, in generate_response
+    df = self.preprocess_input(user_input)
+  File "/home/mazen/Desktop/new/ll.py", line 269, in preprocess_input
+    raise ValueError(f"Please provide values for the missing fields: {', '.join(missing_fields)}")
+ValueError: Please provide values for the missing fields: gender
+
+2024-12-14 06:58:21,021 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 06:58:21,134 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 06:58:21,137 - __main__ - INFO - User input: customer A details are gender is male, Senior_Citizen yes, Is_Married yes, Dependents yes, tenure 20, Dual is yes, Contract is month-to-month, Paperless_Billing is yes, Payment_Method is electronic check, Monthly_Charges is 100, Online_Security is yes, Online_Backup is yes, Device_Protection is yes, Streaming_TV is no, Streaming_Movies is yes, Internet_Service is yes, Tech_Support is yes
+2024-12-14 06:58:21,214 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 06:58:22,717 - __main__ - INFO - Predicted churn probability: 0.1769958736004606
+2024-12-14 06:58:22,718 - __main__ - INFO - Generated prompt: 
+CUSTOMER CONTEXT ANALYSIS:
+-------------------------
+Detected Customer Profile:
+Gender: male
+Senior Citizen: yes
+Is Married: yes
+Dependents: yes
+Tenure: 20
+Dual: yes
+Internet Service: no
+Online Security: no internet service
+Online Backup: no internet service
+Device Protection: no internet service
+Tech Support: no internet service
+Streaming Tv: no internet service
+Streaming Movies: no internet service
+Contract: month-to-month
+Paperless Billing: yes
+Payment Method: electronic check
+Monthly Charges: 20
+
+CHURN RISK ASSESSMENT:
+---------------------
+Risk Classification: Low Risk
+Predicted Churn Probability: 17.70%
+
+STRATEGIC RESPONSE FRAMEWORK:
+----------------------------
+1. Empathetically acknowledge the customer's unique situation
+2. Provide personalized retention recommendations
+3. Identify potential pain points or improvement areas
+4. Suggest tailored service modifications
+
+Your response should:
+- Be concise and actionable
+- Focus on customer value
+- Address potential churn triggers
+- Demonstrate proactive customer care
+
+GENERATE RESPONSE:
+
+2024-12-14 06:58:29,913 - __main__ - INFO - LLM response: ------------------
+- Determine if customer can be retained and why
+- Identify specific pain points and potential improvement areas
+- Make targeted recommendations that address key customer needs
+- Determine how to create a positive customer experience
+- Address potential churn triggers and risk factors
+
+

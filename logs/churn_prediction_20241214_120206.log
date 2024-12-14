@@ -1,0 +1,6 @@
+2024-12-14 12:02:06,742 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 12:02:06,745 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+2024-12-14 12:02:06,745 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

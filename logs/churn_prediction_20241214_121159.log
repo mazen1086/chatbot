@@ -1,0 +1,117 @@
+2024-12-14 12:11:59,667 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 12:11:59,669 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.126.13:5000
+2024-12-14 12:11:59,669 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-14 12:12:05,300 - __main__ - INFO - User input: hello
+2024-12-14 12:12:05,304 - __main__ - WARNING - Missing fields in user input: ['gender', 'Senior_Citizen', 'Is_Married', 'Dependents', 'tenure', 'Dual', 'Contract', 'Paperless_Billing', 'Payment_Method', 'Monthly_Charges', 'Online_Security', 'Online_Backup', 'Device_Protection', 'Streaming_TV', 'Streaming_Movies', 'Internet_Service', 'Tech_Support']
+2024-12-14 12:12:05,306 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 12:12:05,307 - __main__ - INFO - Generated prompt: You are a highly effective assistant designed to support the marketing team in understanding and predicting customer churn. Your primary goal is to provide insights about churn probability when asked, ensuring that your responses are concise, professional, and helpful. Avoid providing technical details such as code or implementation specifics.
+
+Context:
+
+
+Avoid disclosing the churn probability. Instead, ask the user for more client-related information to assist with the analysis.hello
+2024-12-14 12:12:43,327 - __main__ - INFO - LLM response:  world
+
+Provide detailed explanations of how you arrived at your answer. If possible, include screenshots or other visual representations to help the user understand your reasoning.
+If necessary, provide additional context or background information about the data set being analyzed. This can be useful for clarifying any assumptions made during the analysis process.
+
+
+In this scenario, we have a dataset containing information about customers who have recently chnaged their plans. We:::::::::::::::::::::::::::::::::::
+
+The first step in analyzing this dataset is to identify which customers are most likely to change their plan. To do this, we need to calculate the churn rate for each customer. The churn rate is calculated by dividing the number of customers who changed their plan by the total number of customers. For example, if there are 100 customers in our dataset, and 10 of them changed their plan, then the churn rate would be 10/100 = 0.1 (or 10%).
+
+We can use this calculation to determine which customers are most likely to change their plan. Customers with a higher churn rate are more likely to change their plan than those with a lower churn rate. In this case, we can use the following formula to calculate the probability of churn for each customer:
+Probability of Churn = (Number of Customers Who Changed Plan) / Total Number of Customers
+For example, if there are 50 customers in our dataset, and 20 of them changed their plan, then the probability of churn for these customers would be 20/50 = 0.4 (or 40%).
+2024-12-14 12:12:43,328 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 12:12:43] "POST /api/v1/response HTTP/1.1" 200 -
+2024-12-14 12:13:42,840 - __main__ - INFO - User input: predict churn. user data Gender: male
+Senior Citizen: no
+Is Married: no
+Dependents: no
+Tenure: 10
+Dual: no
+Internet Service: no
+Online Security: no internet service
+Online Backup: no internet service
+Device Protection: no internet service
+Tech Support: no internet service
+Streaming Tv: no internet service
+Streaming Movies: no internet service
+Contract: month-to-month
+Paperless Billing: no
+Payment Method: electronic check
+Monthly Charges: 10
+
+2024-12-14 12:13:42,845 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 12:13:42,905 - __main__ - INFO - Predicted churn probability: 0.1769958736004606
+2024-12-14 12:13:42,906 - __main__ - INFO - Generated prompt: You are a highly effective assistant designed to support the marketing team in understanding and predicting customer churn. Your primary goal is to provide insights about churn probability when asked, ensuring that your responses are concise, professional, and helpful. Avoid providing technical details such as code or implementation specifics.
+
+Context:
+Gender: male
+Senior Citizen: no
+Is Married: no
+Dependents: no
+Tenure: 10
+Dual: no
+Internet Service: no
+Online Security: no internet service
+Online Backup: no internet service
+Device Protection: no internet service
+Tech Support: no internet service
+Streaming Tv: no internet service
+Streaming Movies: no internet service
+Contract: month-to-month
+Paperless Billing: no
+Payment Method: electronic check
+Monthly Charges: 10
+
+Inform the user about the churn details. Mention that the churn risk is classified as 'Low Risk', and the probability is 0.18.predict churn. user data Gender: male
+Senior Citizen: no
+Is Married: no
+Dependents: no
+Tenure: 10
+Dual: no
+Internet Service: no
+Online Security: no internet service
+Online Backup: no internet service
+Device Protection: no internet service
+Tech Support: no internet service
+Streaming Tv: no internet service
+Streaming Movies: no internet service
+Contract: month-to-month
+Paperless Billing: no
+Payment Method: electronic check
+Monthly Charges: 10
+
+2024-12-14 12:14:42,289 - __main__ - INFO - LLM response: Predict churn
+
+# Churn Probability Prediction
+
+## What is Churn Probability?
+
+Churn probability prediction refers to the estimation of the likelihood of customers leaving an organization or company. It involves analyzing various factors related to the customer’s experience with the business, such as their satisfaction level, loyalty, and retention rate. The aim is to determine whether the customer is likely to leave and take their business elsewhere.
+
+The process typically starts by gathering data on customer interactions, including purchase history, product usage, and feedback surveys. This information is then analyzed using statistical methods like regression analysis or machine learning algorithms to predict the likelihood of churn for each individual customer.
+
+Once the model has been trained, it can be used to make predictions on new customers based on their past behavior. By identifying at-risk customers early on, organizations can take proactive steps to retain them and reduce the overall cost associated with customer turnover.
+
+## How Does Churn Probability Work?
+
+When a customer decides to terminate their relationship with a brand, it is referred to as "churning." Churn rates can vary significantly between industries and companies; however, it is generally accepted that high levels of churn indicate a need for improvement in customer service quality, pricing strategy, or other areas of operation.
+
+To calculate churn probability, businesses use a variety of techniques, including historical data analysis, predictive modeling, and machine learning algorithms. These tools help identify patterns in customer behavior and predict which customers are most likely to churn before they actually do so.
+
+By tracking customer activity over time and monitoring key metrics such as revenue per customer, engagement rates, and conversion rates, businesses can gain valuable insight into potential churn risks. With this information in hand, managers can implement strategies to keep existing customers happy and prevent them from leaving.
+
+## Factors Affecting Customer Churn Rate
+
+There are several reasons why customers may choose to leave an organization or company. Some common causes include dissatisfaction with the products or services offered, poor communication between departments within the firm, lack of transparency regarding financial matters, and unreliable delivery times.
+
+Factors affecting customer churn rate include:
+
+1. Product Quality & Satisfaction: Customers expect top-notch products and services from any company they interact with online. If a website fails to deliver what its users want or if its prices aren't competitive enough, there's a good chance that people will start looking elsewhere for better deals.
+2. Communication Issues: Poor communication among employees within a मनी में देने वाला कंपनी can lead to misunderstandings between different
+2024-12-14 12:14:42,291 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 12:14:42] "POST /api/v1/response HTTP/1.1" 200 -

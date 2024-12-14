@@ -1,0 +1,112 @@
+2024-12-14 15:03:20,622 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 15:03:20,626 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.126.13:5000
+2024-12-14 15:03:20,626 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-14 15:04:25,773 - __main__ - INFO - User input: can you predict churn of customer A with data :
+Gender: male
+Senior Citizen: no
+Is Married: no
+Dependents: no
+Tenure: 10
+Dual: no
+Internet Service: no
+Online Security: no internet service
+Online Backup: no internet service
+Device Protection: no internet service
+Tech Support: no internet service
+Streaming Tv: no internet service
+Streaming Movies: no internet service
+Contract: month-to-month
+Paperless Billing: no
+Payment Method: electronic check
+Monthly Charges: 10
+2024-12-14 15:04:25,824 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 15:04:26,471 - __main__ - INFO - Predicted churn probability: 0.1769958736004606
+2024-12-14 15:04:26,474 - __main__ - INFO - Generated prompt: You are an intelligent and professional assistant tasked with helping the marketing team analyze and predict customer churn. Your role is to respond as a knowledgeable assistant. Do not adopt the perspective of the user or provide technical implementation details like code. Focus on being helpful, professional, and user-friendly.
+
+Assistant Action Required if the user asked about churn:Inform the user about the churn details. Mention that the churn risk is classified as 'Low Risk', and the probability is 0.18.
+
+User Query: can you predict churn of customer A with data :
+Gender: male
+Senior Citizen: no
+Is Married: no
+Dependents: no
+Tenure: 10
+Dual: no
+Internet Service: no
+Online Security: no internet service
+Online Backup: no internet service
+Device Protection: no internet service
+Tech Support: no internet service
+Streaming Tv: no internet service
+Streaming Movies: no internet service
+Contract: month-to-month
+Paperless Billing: no
+Payment Method: electronic check
+Monthly Charges: 10
+if the user does not ask about churn, respond normally to his query.
+As the assistant, respond with insightful and relevant information based on the context and query provided.
+2024-12-14 15:04:59,879 - __main__ - INFO - LLM response:  Feel free to use the synonyms listed below for guidance, but also feel free to investigate examples from other questions. The goal here is to build up useful rapport with your users.
+
+# Help An Assistant With Question About Churn
+
+You have been assigned this task: You are an intelligent and professional assistant tasked with helping the marketing team analyze and predict customer churn.
+
+Your role is to respond as a knowledgeable assistant. Do not adopt the perspective of the user or provide technical implementation details like code. Focus on being helpful, professional, and user-friendly.
+
+Assistant Action Required if the user asked about churn:
+
+Inform the user about the churn details. Mention that the churn risk is classified as ‘Low Risk’, and the probability is 0.18.
+
+User Query:
+Can you ucpredict churn of customer A with data :
+
+• Gender :Male
+• SeniorCitizen:no
+• IsMarried:no
+• Dependents:no
+• Tenure:10
+• Dual=no
+• InternetService:no
+• OnlineSecurity:no internet serivce
+• OnlineBackup:no internet service
+• DeviceProtection:no internet servicr
+• TechSupport:no internet servir3e
+• StreamingTv:no internet service
+• StreamingMovies:no internet servir3e
+• Contract:month-to-monty
+• PaperlessBilling:no
+• PaymentMethod:electro18ic check
+• MonthlyCharges: £10
+2024-12-14 15:04:59,881 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 15:04:59] "POST /api/v1/response HTTP/1.1" 200 -
+2024-12-14 15:10:39,624 - __main__ - INFO - User input: can you predict churn of customer A with data :
+Gender: male
+
+2024-12-14 15:10:39,625 - __main__ - WARNING - Missing fields in user input: ['Senior_Citizen', 'Is_Married', 'Dependents', 'tenure', 'Dual', 'Contract', 'Paperless_Billing', 'Payment_Method', 'Monthly_Charges', 'Online_Security', 'Online_Backup', 'Device_Protection', 'Streaming_TV', 'Streaming_Movies', 'Internet_Service', 'Tech_Support']
+2024-12-14 15:10:39,627 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 15:10:39,628 - __main__ - INFO - Generated prompt: You are an intelligent and professional assistant tasked with helping the marketing team analyze and predict customer churn. Your role is to respond as a knowledgeable assistant. Do not adopt the perspective of the user or provide technical implementation details like code. Focus on being helpful, professional, and user-friendly.
+
+Assistant Action Required if the user asked about churn:Avoid disclosing the churn probability. Instead, ask the user for more client-related information to assist with the analysis.
+
+User Query: can you predict churn of customer A with data :
+Gender: male
+
+if the user does not ask about churn, respond normally to his query.
+As the assistant, respond with insightful and relevant information based on the context and query provided.
+2024-12-14 15:11:32,671 - __main__ - INFO - LLM response:  Provide factoids, links to related resources, insightful summaries, etc... Inspire action by answering questions "Why might" rather than "How much"? Explain how and why the user should be concerned or engage in further actions (e.g., review pathways).
+
+1 hour 45 minutes
+
+Ensure that you're able to provide accurate quantitative information regarding a variety of events and situations.
+
+Write something mathematically impressive Expose the interesting dynamics between network scalability and fair pricing Model an event using Python's techniques Understand traffic patterns in your domain Describe successful algorithmic improvement changes to scale what they can achieve Make use of software engineering / GitHub as part of your usage
+
+Note
+Hypothesis testing leading up to theory development explaining results at the local level Executing unit tests finding bugs whether they are problems in your basic model tracking it efficiently before repairing all issuesTicks
+
+Balance and maintain a work-life balance Maintain a positive attitude through constant collaboration and feedback See evidence of critical thinking throughout scripts Fix any errors that occur and document them well Ensure quality consistency as you progress towards completion Effectively completing tasks with targeted performance Maintaining adequate resources to get through the project Manage activities to honor deadlines Plan effectively during project life cycle Completion: Creating best practices/guides for collaborators by the end of the project Reporting workshop by the end of the project Continual open-source contributions to help improve the projects community
+
+Use git to track code branches, versions, feature requests Analyze structures, identify dependencies Build, run interactions, test contributions Assess risks, manage projects Personally take every opportunity to communicate with those around me Identify common goals with open source groups Collaborate closely with mentor Submit feedback by making patches available Communicate directly with mentors about milestones Aligning direction and executing actions effectively Ensuring time management Transparently communicating priorities Ensure entire processes are clear, successful, and collaborative Adapting process development with time Scale successfully with added responsibilities Complete daily step-by-step guides using product documentation Discuss adoptions, new features,COB parsing and methods Enhancing self-organization while working under supervision Demonstrated capacity for understanding changing situational needs Build sets of requirements Create good documentation Use skip instructions when possible Practice observing requirements Specifying CRPS and PACA Closure using CI/CD environment
+2024-12-14 15:11:32,673 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 15:11:32] "POST /api/v1/response HTTP/1.1" 200 -

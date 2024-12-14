@@ -1,0 +1,127 @@
+2024-12-14 10:36:11,891 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 10:36:11,893 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.126.13:5000
+2024-12-14 10:36:11,893 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-14 10:36:14,875 - __main__ - INFO - User input:  gender yes, Senior_Citizen no, Is_Married yes, Dependents yes, tenure 10, Dual yes, Contract month-to-month, Paperless_Billing yes, Payment_Method electronic check, Monthly_Charges 100, Online_Security yes, Online_Backup yes, Device_Protection no, Streaming_TV yes, Streaming_Movies no, Internet_Service yes, Tech_Support yes
+2024-12-14 10:36:14,879 - __main__ - WARNING - Missing fields in user input: ['gender']
+2024-12-14 10:36:14,880 - __main__ - ERROR - Error in input preprocessing: Please provide values for the missing fields: gender
+2024-12-14 10:36:14,881 - __main__ - ERROR - Traceback (most recent call last):
+  File "ll.py", line 252, in preprocess_input
+    raise ValueError(f"Please provide values for the missing fields: {', '.join(missing_fields)}")
+ValueError: Please provide values for the missing fields: gender
+
+2024-12-14 10:36:14,881 - __main__ - ERROR - Error during response generation: Please provide values for the missing fields: gender
+2024-12-14 10:36:14,882 - __main__ - ERROR - Traceback (most recent call last):
+  File "ll.py", line 266, in generate_response
+    df = self.preprocess_input(user_input)
+  File "ll.py", line 252, in preprocess_input
+    raise ValueError(f"Please provide values for the missing fields: {', '.join(missing_fields)}")
+ValueError: Please provide values for the missing fields: gender
+
+2024-12-14 10:36:14,883 - ll - ERROR - Exception on /api/v1/response [POST]
+Traceback (most recent call last):
+  File "ll.py", line 266, in generate_response
+    df = self.preprocess_input(user_input)
+  File "ll.py", line 252, in preprocess_input
+    raise ValueError(f"Please provide values for the missing fields: {', '.join(missing_fields)}")
+ValueError: Please provide values for the missing fields: gender
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "ll.py", line 317, in getResponse
+    response = chatbot.generate_response(user_input)
+  File "ll.py", line 285, in generate_response
+    raise RuntimeError(f"Could not generate response: {e}")
+RuntimeError: Could not generate response: Please provide values for the missing fields: gender
+2024-12-14 10:36:14,886 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 10:36:14] "[35m[1mPOST /api/v1/response HTTP/1.1[0m" 500 -
+2024-12-14 10:36:17,130 - __main__ - INFO - User input:  gender yes, Senior_Citizen no, Is_Married yes, Dependents yes, tenure 10, Dual yes, Contract month-to-month, Paperless_Billing yes, Payment_Method electronic check, Monthly_Charges 100, Online_Security yes, Online_Backup yes, Device_Protection no, Streaming_TV yes, Streaming_Movies no, Internet_Service yes, Tech_Support yes
+2024-12-14 10:36:17,131 - __main__ - WARNING - Missing fields in user input: ['gender']
+2024-12-14 10:36:17,131 - __main__ - ERROR - Error in input preprocessing: Please provide values for the missing fields: gender
+2024-12-14 10:36:17,132 - __main__ - ERROR - Traceback (most recent call last):
+  File "ll.py", line 252, in preprocess_input
+    raise ValueError(f"Please provide values for the missing fields: {', '.join(missing_fields)}")
+ValueError: Please provide values for the missing fields: gender
+
+2024-12-14 10:36:17,132 - __main__ - ERROR - Error during response generation: Please provide values for the missing fields: gender
+2024-12-14 10:36:17,133 - __main__ - ERROR - Traceback (most recent call last):
+  File "ll.py", line 266, in generate_response
+    df = self.preprocess_input(user_input)
+  File "ll.py", line 252, in preprocess_input
+    raise ValueError(f"Please provide values for the missing fields: {', '.join(missing_fields)}")
+ValueError: Please provide values for the missing fields: gender
+
+2024-12-14 10:36:17,133 - ll - ERROR - Exception on /api/v1/response [POST]
+Traceback (most recent call last):
+  File "ll.py", line 266, in generate_response
+    df = self.preprocess_input(user_input)
+  File "ll.py", line 252, in preprocess_input
+    raise ValueError(f"Please provide values for the missing fields: {', '.join(missing_fields)}")
+ValueError: Please provide values for the missing fields: gender
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "ll.py", line 317, in getResponse
+    response = chatbot.generate_response(user_input)
+  File "ll.py", line 285, in generate_response
+    raise RuntimeError(f"Could not generate response: {e}")
+RuntimeError: Could not generate response: Please provide values for the missing fields: gender
+2024-12-14 10:36:17,135 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 10:36:17] "[35m[1mPOST /api/v1/response HTTP/1.1[0m" 500 -
+2024-12-14 10:36:28,511 - __main__ - INFO - User input:  gender male, Senior_Citizen no, Is_Married yes, Dependents yes, tenure 10, Dual yes, Contract month-to-month, Paperless_Billing yes, Payment_Method electronic check, Monthly_Charges 100, Online_Security yes, Online_Backup yes, Device_Protection no, Streaming_TV yes, Streaming_Movies no, Internet_Service yes, Tech_Support yes
+2024-12-14 10:36:28,558 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 10:36:29,065 - __main__ - INFO - Predicted churn probability: 0.1769958736004606
+2024-12-14 10:36:29,067 - __main__ - INFO - Generated prompt: you are a helpful assistant that help the marketing team predict churn probability
+        for customers. you are the best chatbot assistant in the world.output the churnLow Risk and output the probability0.1769958736004606
+2024-12-14 10:37:26,100 - __main__ - INFO - LLM response: 
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        youкін the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+        you are the best chatbot assistant in the world.input the churnLow Risk and output the probability0.1769958736004606
+        for customers.
+
+2024-12-14 10:37:26,102 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 10:37:26] "POST /api/v1/response HTTP/1.1" 200 -

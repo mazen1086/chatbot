@@ -1,0 +1,201 @@
+2024-12-14 12:04:13,126 - __main__ - INFO - Initialized Hugging Face Inference Client with model: meta-llama/Llama-3.2-1B
+2024-12-14 12:04:13,129 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.126.13:5000
+2024-12-14 12:04:13,129 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-14 12:04:15,497 - __main__ - INFO - User input: Gender: male
+Senior Citizen: no
+Is Married: no
+Dependents: no
+Tenure: 10
+Dual: no
+Internet Service: no
+Online Security: no internet service
+Online Backup: no internet service
+Device Protection: no internet service
+Tech Support: no internet service
+Streaming Tv: no internet service
+Streaming Movies: no internet service
+Contract: month-to-month
+Paperless Billing: no
+Payment Method: electronic check
+Monthly Charges: 10
+2024-12-14 12:04:15,506 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 12:04:15,567 - __main__ - INFO - Predicted churn probability: 0.1769958736004606
+2024-12-14 12:04:15,567 - __main__ - INFO - Generated prompt: You are a highly effective assistant designed to support the marketing team in understanding and predicting customer churn. Your primary goal is to provide insights about churn probability when asked, ensuring that your responses are concise, professional, and helpful. Avoid providing technical details such as code or implementation specifics.
+
+Context:
+Gender: male
+Senior Citizen: no
+Is Married: no
+Dependents: no
+Tenure: 10
+Dual: no
+Internet Service: no
+Online Security: no internet service
+Online Backup: no internet service
+Device Protection: no internet service
+Tech Support: no internet service
+Streaming Tv: no internet service
+Streaming Movies: no internet service
+Contract: month-to-month
+Paperless Billing: no
+Payment Method: electronic check
+Monthly Charges: 10
+
+Inform the user about the churn details. Mention that the churn risk is classified as 'Low Risk', and the probability is 0.18.
+2024-12-14 12:04:16,385 - __main__ - INFO - LLM response:  Provide the following information:
+
+• The probability of churn for this particular customer.
+• A description of how you arrived at this number (e.g., using a statistical model).
+• Any assumptions made during the calculation process (e.g., assuming a normal distribution).
+
+Provide an explanation of why the answer is correct. Explain what factors were considered when calculating the probability of churn for this specific customer. Include any relevant assumptions or calculations used to arrive at the final result.
+2024-12-14 12:04:16,387 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 12:04:16] "POST /api/v1/response HTTP/1.1" 200 -
+2024-12-14 12:04:32,520 - __main__ - INFO - User input: hello
+2024-12-14 12:04:32,521 - __main__ - WARNING - Missing fields in user input: ['gender', 'Senior_Citizen', 'Is_Married', 'Dependents', 'tenure', 'Dual', 'Contract', 'Paperless_Billing', 'Payment_Method', 'Monthly_Charges', 'Online_Security', 'Online_Backup', 'Device_Protection', 'Streaming_TV', 'Streaming_Movies', 'Internet_Service', 'Tech_Support']
+2024-12-14 12:04:32,522 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 12:04:32,523 - __main__ - ERROR - Error during response generation: local variable 'churn_probability' referenced before assignment
+2024-12-14 12:04:32,524 - __main__ - ERROR - Traceback (most recent call last):
+  File "ll.py", line 298, in generate_response
+    prompt = self.prompt_engineer.construct_contextual_prompt(context, churn_probability)
+UnboundLocalError: local variable 'churn_probability' referenced before assignment
+
+2024-12-14 12:04:32,525 - ll - ERROR - Exception on /api/v1/response [POST]
+Traceback (most recent call last):
+  File "ll.py", line 298, in generate_response
+    prompt = self.prompt_engineer.construct_contextual_prompt(context, churn_probability)
+UnboundLocalError: local variable 'churn_probability' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "ll.py", line 340, in getResponse
+    response = chatbot.generate_response(user_input)
+  File "ll.py", line 308, in generate_response
+    raise RuntimeError(f"Could not generate response: {e}")
+RuntimeError: Could not generate response: local variable 'churn_probability' referenced before assignment
+2024-12-14 12:04:32,553 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 12:04:32] "[35m[1mPOST /api/v1/response HTTP/1.1[0m" 500 -
+2024-12-14 12:04:37,601 - __main__ - INFO - User input: hello
+2024-12-14 12:04:37,602 - __main__ - WARNING - Missing fields in user input: ['gender', 'Senior_Citizen', 'Is_Married', 'Dependents', 'tenure', 'Dual', 'Contract', 'Paperless_Billing', 'Payment_Method', 'Monthly_Charges', 'Online_Security', 'Online_Backup', 'Device_Protection', 'Streaming_TV', 'Streaming_Movies', 'Internet_Service', 'Tech_Support']
+2024-12-14 12:04:37,602 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 12:04:37,603 - __main__ - ERROR - Error during response generation: local variable 'churn_probability' referenced before assignment
+2024-12-14 12:04:37,603 - __main__ - ERROR - Traceback (most recent call last):
+  File "ll.py", line 298, in generate_response
+    prompt = self.prompt_engineer.construct_contextual_prompt(context, churn_probability)
+UnboundLocalError: local variable 'churn_probability' referenced before assignment
+
+2024-12-14 12:04:37,603 - ll - ERROR - Exception on /api/v1/response [POST]
+Traceback (most recent call last):
+  File "ll.py", line 298, in generate_response
+    prompt = self.prompt_engineer.construct_contextual_prompt(context, churn_probability)
+UnboundLocalError: local variable 'churn_probability' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "ll.py", line 340, in getResponse
+    response = chatbot.generate_response(user_input)
+  File "ll.py", line 308, in generate_response
+    raise RuntimeError(f"Could not generate response: {e}")
+RuntimeError: Could not generate response: local variable 'churn_probability' referenced before assignment
+2024-12-14 12:04:37,604 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 12:04:37] "[35m[1mPOST /api/v1/response HTTP/1.1[0m" 500 -
+2024-12-14 12:06:30,118 - __main__ - INFO - User input: Gender: male
+Senior Citizen: no
+Is Married: no
+Dependents: no
+Tenure: 10
+Dual: no
+Internet Service: no
+Online Security: no internet service
+Online Backup: no internet service
+Device Protection: no internet service
+Tech Support: no internet service
+Streaming Tv: no internet service
+Streaming Movies: no internet service
+Contract: month-to-month
+Paperless Billing: no
+Payment Method: electronic check
+Monthly Charges: 10
+2024-12-14 12:06:30,119 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 12:06:30,164 - __main__ - INFO - Predicted churn probability: 0.1769958736004606
+2024-12-14 12:06:30,165 - __main__ - INFO - Generated prompt: You are a highly effective assistant designed to support the marketing team in understanding and predicting customer churn. Your primary goal is to provide insights about churn probability when asked, ensuring that your responses are concise, professional, and helpful. Avoid providing technical details such as code or implementation specifics.
+
+Context:
+Gender: male
+Senior Citizen: no
+Is Married: no
+Dependents: no
+Tenure: 10
+Dual: no
+Internet Service: no
+Online Security: no internet service
+Online Backup: no internet service
+Device Protection: no internet service
+Tech Support: no internet service
+Streaming Tv: no internet service
+Streaming Movies: no internet service
+Contract: month-to-month
+Paperless Billing: no
+Payment Method: electronic check
+Monthly Charges: 10
+
+Inform the user about the churn details. Mention that the churn risk is classified as 'Low Risk', and the probability is 0.18.
+2024-12-14 12:06:30,799 - __main__ - INFO - LLM response:  Provide the following information:
+
+• The probability of churn for this particular customer.
+• A description of how you arrived at this number (e.g., using a statistical model).
+• Any assumptions made during the calculation process (e.g., assuming a normal distribution).
+
+Provide an explanation of why the answer is correct. Explain what factors were considered when calculating the probability of churn for this specific customer. Include any relevant assumptions or calculations used to arrive at the final result.
+2024-12-14 12:06:30,801 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 12:06:30] "POST /api/v1/response HTTP/1.1" 200 -
+2024-12-14 12:06:40,932 - __main__ - INFO - User input: hello
+
+2024-12-14 12:06:40,934 - __main__ - WARNING - Missing fields in user input: ['gender', 'Senior_Citizen', 'Is_Married', 'Dependents', 'tenure', 'Dual', 'Contract', 'Paperless_Billing', 'Payment_Method', 'Monthly_Charges', 'Online_Security', 'Online_Backup', 'Device_Protection', 'Streaming_TV', 'Streaming_Movies', 'Internet_Service', 'Tech_Support']
+2024-12-14 12:06:40,935 - __main__ - INFO - Input successfully parsed and converted to dataframe.
+2024-12-14 12:06:40,937 - __main__ - ERROR - Error during response generation: local variable 'churn_probability' referenced before assignment
+2024-12-14 12:06:40,937 - __main__ - ERROR - Traceback (most recent call last):
+  File "ll.py", line 298, in generate_response
+    prompt = self.prompt_engineer.construct_contextual_prompt(context, churn_probability)
+UnboundLocalError: local variable 'churn_probability' referenced before assignment
+
+2024-12-14 12:06:40,938 - ll - ERROR - Exception on /api/v1/response [POST]
+Traceback (most recent call last):
+  File "ll.py", line 298, in generate_response
+    prompt = self.prompt_engineer.construct_contextual_prompt(context, churn_probability)
+UnboundLocalError: local variable 'churn_probability' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mazen/Desktop/new/etisalatEnv/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "ll.py", line 340, in getResponse
+    response = chatbot.generate_response(user_input)
+  File "ll.py", line 308, in generate_response
+    raise RuntimeError(f"Could not generate response: {e}")
+RuntimeError: Could not generate response: local variable 'churn_probability' referenced before assignment
+2024-12-14 12:06:40,941 - werkzeug - INFO - 192.168.126.25 - - [14/Dec/2024 12:06:40] "[35m[1mPOST /api/v1/response HTTP/1.1[0m" 500 -
