@@ -180,7 +180,7 @@ Error handling and logging are implemented at each step:
 - **Prompt Generation**: Logs the prompts constructed for the language model, including any fallback mechanisms for incomplete data.
 - **LLM Response Generation**: Tracks API requests to the language model and handles timeouts or response errors.
 
-```mermaid
+```
 graph TD
 A[User Input in Streamlit] -->|Send JSON| B[Flask API]
 B --> C[Input Parsing & Validation]
